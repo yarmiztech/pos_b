@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<odoo>
+<template id="receipt_ext_js"  inherit_id="point_of_sale.assets">
+    <xpath expr="." position="inside">
+        <script type="text/javascript" src="/e_pos_saudi_vat_qr/static/src/js/jquery-qrcode.min.js" />
+        <script type="text/javascript" src="/e_pos_saudi_vat_qr/static/src/js/KitchenReciept.js" />
+        <script type="text/javascript" src="/e_pos_saudi_vat_qr/static/src/js/models.js" />
+        <script type="text/javascript" src="/e_pos_saudi_vat_qr/static/src/js/OrderReceipt.js" />
+        <script type="text/javascript" src="/e_pos_saudi_vat_qr/static/src/js/ReceiptScreen.js" />
+        <link rel="stylesheet" type="text/css" href="/e_pos_saudi_vat_qr/static/src/css/arabic_font.css"/>
+        
+    </xpath>
+</template>
+</odoo>

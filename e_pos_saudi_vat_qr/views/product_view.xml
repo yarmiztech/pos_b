@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<odoo>
+	<data>
+		<record id="inherit_view_product_form" model="ir.ui.view">
+			<field name="name">product.template.form</field>
+			<field name="model">product.template</field>
+			<field name="inherit_id" ref="product.product_template_form_view" />
+			<field name="arch" type="xml">
+				<xpath expr="//div[hasclass('oe_title')]//h1" position="after">
+					<label class="oe_edit_only" for="name_arabic" string="Product Arabic Name"/>
+					<field name="name_arabic" placeholder="Product Arabic Name"/>
+				</xpath>
+			</field>
+		</record>
+
+		<record id="pos_config_view_form_inherite" model="ir.ui.view"> 
+			<field name="name">pos.config.form.inherite</field>
+			<field name="model">pos.config</field>
+			<field name="inherit_id" ref="point_of_sale.pos_config_view_form"/>
+			
+			<field name="arch" type="xml">
+				<div id="category_reference" position="after">
+					<div class="col-xs-12 col-md-6 o_setting_box">
+						<div class="o_setting_left_pane">
+							<field name='allow_kitchen_ticket_print' />
+						</div>
+						<div class="o_setting_right_pane">
+							<label for="allow_kitchen_ticket_print"/>
+							<div class="text-muted">
+								Allow to print kitchen receipt print.
+							</div>
+						</div>
+					</div>
+				</div>
+			</field>
+		</record>
+	</data>
+</odoo>
